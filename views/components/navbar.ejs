@@ -1,0 +1,17 @@
+<nav>
+    <h2><a href="#">jwt app</a></h2>
+    <!-- <ul>
+        <li><a href="/login">Log in</a></li>
+        <li><a href="/register">Sign up</a></li>
+    </ul> -->
+
+    <ul>
+        <% if (user) { %>
+          <li>Welcome, <%= user.email %></li>
+          <li><a href="/logout">Log out</a></li>
+        <% } else { %>
+          <li><a href="/login">Log in</a></li>
+          <li><a href="/register" class="btn">Sign up</a></li>
+        <% } %>
+      </ul>
+</nav>
